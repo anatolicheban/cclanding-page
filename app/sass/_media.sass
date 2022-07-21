@@ -1,0 +1,45 @@
+@media (max-width: 750px)
+    .header
+        &__menu ul
+            display: block
+            position: absolute
+            top: 0
+            right: 0
+            width: 300px
+            transform: translateX(100%)
+            padding-top: $headheight
+            transition: transform .3s
+            transition-timing-function: ease-out
+            overflow-y: hidden
+            z-index: 5
+            background-color: #fff
+            height: 100vh
+        &__menu-item
+            margin-left: 0 !important
+            text-align: center
+            padding: 14px
+            background-color: #fff
+            border-bottom: 1px solid rgba($color2, 0.2)
+        &__menu-link
+            font-size: 20px
+        &__menu-btn
+            position: relative
+            z-index: 6
+            background-color: transparent
+            border: none
+            display: block
+            span + span
+                margin-top: 6px
+            span
+                height: 5px
+                width: 35px
+                display: block
+                border-radius: 3px
+                background-color: $color2
+        &__buybtn img
+            height: 32px
+            width: auto
+            margin-left: 0
+            margin-right: 30px
+            position: relative
+            z-index: 4

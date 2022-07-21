@@ -4,4 +4,663 @@
 @import 'libs'
 @import 'global'
 
+.logo
+    font-size: 36px
+    font-family: 'Open Sans', serif
+    font-weight: 800
+    color: $color2
+    span
+        color: #FFB400
+.header
+    background-color: #fff
+    &__inner
+        height: $headheight
+        display: flex
+        align-items: center
+        // justify-content: space-between
+    &__menu
+        margin-left: auto
+    &__menu ul
+        display: flex
+    &__buybtn
+        margin-left: 26px
+    &__menu li + li
+        margin-left: 26px
+    &__menu-link
+        font-family: 'Poppins'
+        font-weight: 500
+        font-size: 14px
+        line-height: 21px
+        color: #000
+    &__buybtn
+        background-color: transparent
+        border: none
+        cursor: pointer
+    &__menu-btn
+        display: none
+        cursor: pointer
+.header__menu-list--active
+    transform: translateX(0) !important
+    height: 100vh
+    border-left: 5px solid rgba($color2, 0.4)
 
+.footer
+    display: grid
+    grid-template-columns: 1fr 1fr
+    &__formblock
+        background-color: $color1
+        padding: 73px 20px 68px
+    &__formblock-title
+        max-width: 566px
+        margin: 0 auto
+        @extend %title
+        padding-bottom: 18px
+        margin-bottom: 44px
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 48px
+            height: 5px
+            background-color: $color2
+    &__form
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        max-width: 566px
+        margin: 0 auto
+
+    &__form-input
+        margin-bottom: 15px
+        width: 47%
+        height: 53px
+        padding: 13px 18px
+        border: 2px solid #fff
+        @extend %form
+        color: $color2
+        &:focus
+            outline: none
+            border: 2px solid #666
+            font-weight: 600
+    *::placeholder
+        @extend %form
+
+    &__form-message
+        width: 100%
+        resize: none
+        margin-bottom: 16px
+        border: 2px solid #fff
+        padding: 13px 18px
+        height: 132px
+        @extend %form
+        color: $color2
+        &:focus
+            outline: none
+            border: 2px solid #666
+            font-weight: 600
+    &__form-submit
+        margin-left: auto
+        border: 4px solid #fff
+        background-color: transparent
+        padding: 12px 43px
+        color: #fff
+        font-family: 'Rubik'
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.1em
+        cursor: pointer
+    &__social
+        display: flex
+        background-color: $color2
+        padding: 47px 0 43px
+        justify-content: center
+        gap: 0 73px
+    &__contacts
+        display: flex
+        flex-direction: column
+        padding: 48px 0 0 124px
+    &__contacts-link
+        display: inline-block
+        padding-left: 34px
+        margin-bottom: 23px
+        font-family: 'Rubik'
+        font-weight: 500
+        font-size: 15px
+        line-height: 27px
+        color: #000000
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+    &__contacts-link--location::before
+        background-image: url(../images/location.svg)
+        height: 21px
+        width: 14px
+    &__contacts-link--phone::before
+        background-image: url(../images/phone.svg)
+        height: 25px
+        width: 24px
+    &__contacts-link--email::before
+        background-image: url(../images/mail.svg)
+        height: 25px
+        width: 24px
+
+.construction
+    &__inner
+        display: grid
+        grid-template-columns: minmax(0, 1048px) minmax(0, 392px)
+    &__content
+        position: relative
+        max-width: 100%
+        padding-bottom: 61px
+    &__content-bg
+        position: absolute
+        object-fit: cover
+        height: 100%
+        width: 100%
+        z-index: 1
+    &__content-dark
+        position: absolute
+        height: 100%
+        width: 100%
+        background-color: rgba(#000, .85)
+        z-index: 2
+
+    &__content-title, &__content-text, &__content-btn
+        z-index: 3
+        position: relative
+        margin-left: 174px
+        color: #fff
+    &__content-title
+        font-family: 'Rubik'
+        font-weight: 700
+        font-size: 64px
+        line-height: 50px
+        padding: 26px 0 26px 28px
+        position: relative
+        margin-top: 93px
+        margin-bottom: 28px
+        &::before
+            position: absolute
+            content: ""
+            background-color: $color1
+            left: 0
+            bottom: 0
+            top: 0
+            width: 10px
+    &__content-text
+        font-family: 'Open Sans'
+        font-weight: 400
+        font-size: 22px
+        line-height: 32px
+        max-width: 758px
+        padding-right: 15px
+    &__content-btn
+        background-color: $color1
+        padding: 19px 51px
+        font-family: 'Rubik'
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.1em
+        text-transform: uppercase
+        margin-top: 54px
+        display: inline-block
+
+    &__services
+        background-color: $color1
+        width: 392px
+        padding-right: 31px
+        padding-top: 30px
+    &__services-title
+        margin-left: 42px
+        font-family: 'Rubik'
+        color: $color2
+        font-weight: 700
+        font-size: 32px
+        line-height: 50px
+        margin-bottom: 11px
+    &__services-itemtitle
+        font-family: 'Rubik'
+        font-weight: 700
+        font-size: 16px
+        line-height: 40px
+        color: $color2
+    &__services-itemtext
+        font-family: 'Open Sans'
+        font-weight: 400
+        font-size: 15px
+        line-height: 27px
+        letter-spacing: 0.04em
+        color: #FFFFFF
+    &__services-item
+        margin-bottom: 20px
+        margin-left: 36px
+        padding-left: 72px
+        position: relative
+        &::after
+            position: absolute
+            content: ""
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+
+.item--building
+    &::after
+        background-image: url(../images/building.svg)
+        width: 55px
+        height: 58px
+
+.item--foundation
+    &::after
+        background-image: url(../images/foundation.svg)
+        width: 62px
+        height: 55px
+        left: -5px
+
+.item--site
+    &::after
+        background-image: url(../images/site.svg)
+        width: 54px
+        height: 55px
+
+.quote
+    &__inner
+        padding: 35px 0
+        display: flex
+        justify-content: center
+        align-items: center
+    &__title
+        @extend %title
+        margin-right: 221px
+    &__btn
+        text-transform: uppercase
+        color: $color1
+        padding: 24px 65px
+        border: 5px solid $color1
+        background-color: transparent
+        font-family: 'Rubik'
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.1em
+
+.project
+    margin-bottom: 100px
+    &__inner
+        display: grid
+        grid-template-columns: 440px minmax(0, 100%)
+    &__info
+        position: relative
+    &-img
+        object-fit: cover
+        height: 100%
+        width: 100%
+    &__info-title
+        @extend %title
+        margin: 90px 0 38px
+        padding-bottom: 38px
+        position: relative
+        &::after
+            content: ""
+            position: absolute
+            bottom: 0
+            left: 0
+            background-color: $color1
+            height: 5px
+            width: 48px
+    &__info-text
+        display: flex
+        min-height: 270px
+    &__info-text-p
+        max-width: 366px
+        font-family: 'Open Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 15px
+        line-height: 27px
+        letter-spacing: 0.04em
+        color: #666
+    .text-left, &__info-title
+        margin-left: 134px
+    &__info-text-container
+        margin-left: 80px
+        padding-right: 15px
+        p
+            margin-bottom: 90px
+    &__info-btn
+        background-color: transparent
+        border: 5px solid #1f1f1f
+        padding: 18px 54px
+        text-transform: uppercase
+        font-family: 'Rubik'
+        font-style: normal
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.1em
+        color: #1F1F1F
+        transition: .3s
+        display: inline-block
+        &:hover
+            color: #fff
+            background-color: #1f1f1f
+    &__info-stat
+        display: flex
+    &__info-years, &__info-completed
+        width: 53%
+        text-align: center
+        padding: 26px 0 14px
+        margin-top: 104px
+        min-height: 130px
+    &__info-value
+        font-family: 'Rubik'
+        font-style: normal
+        font-weight: 700
+        font-size: 40px
+        line-height: 50px
+    &__info-stat-text
+        font-family: 'Rubik'
+        font-style: normal
+        font-weight: 700
+        font-size: 12px
+        line-height: 50px
+        letter-spacing: 0.02em
+    &__info-years
+        background-color: $color1
+    &__info-completed
+        background-color: $color2
+        h4, p
+            color: #fff
+
+.latest
+    margin-bottom: 100px
+    &__title
+        text-align: center
+        @extend %title
+        padding-bottom: 38px
+        margin-bottom: 38px
+        position: relative
+        &::after
+            position: absolute
+            content: ""
+            height: 5px
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            width: 48px
+            background-color: $color1
+    &__projects
+        display: flex
+        justify-content: center
+        gap: 0 60px
+        margin-bottom: 38px
+    &__projects-item
+        transition: transform .4s
+        width: 293px
+        &:hover
+            transform: scale(1.05)
+    &__projects-item-info
+        margin-top: 22px
+        border: 1px solid #666
+        padding-left: 25px
+        padding-right: 24px
+    &__projects-item-title
+        margin-top: 42px
+        font-family: 'Open Sans'
+        font-weight: 700
+        font-size: 15px
+        line-height: 27px
+        letter-spacing: 0.1em
+        color: #2A2A2A
+    &__projects-item-text
+        margin-top: 21px
+        font-family: 'Open Sans'
+        font-weight: 400
+        font-size: 15px
+        line-height: 27px
+        letter-spacing: 0.04em
+        color: #666666
+    &__projects-item-link
+        margin: 83px 0 18px
+        display: inline-block
+        padding: 7px 22px
+        text-transform: uppercase
+        border: 1px solid #666
+        font-family: 'Rubik'
+        font-weight: 700
+        font-size: 11px
+        line-height: 13px
+        letter-spacing: 0.1em
+        color: #666666
+    &__btn-box
+        display: flex
+        justify-content: center
+    &__btn
+        text-transform: uppercase
+        color: #1f1f1f
+        font-family: 'Rubik'
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.1em
+        border: 4px solid #1F1F1F
+        padding: 18px 68px
+
+.building
+    margin-bottom: 100px
+    &__inner
+        display: grid
+        grid-template-columns: 440px minmax(0, 100%)
+.building__info
+    background-color: $color2
+    color: #fff
+    padding-left: 38px
+.building__title, .together__title
+    @extend %title
+    color: inherit
+    max-width: 350px
+    padding-bottom: 38px
+    margin: 62px 0 73px
+    position: relative
+    &::after
+        content: ""
+        position: absolute
+        height: 5px
+        width: 48px
+        background-color: $color1
+        bottom: 0
+        left: 0
+.building__text, .together__text
+    font-family: 'Open Sans'
+    font-weight: 400
+    font-size: 15px
+    line-height: 27px
+    letter-spacing: 0.04em
+    max-width: 366px
+    margin-bottom: 38px
+.building__button, .together__button
+    color: $color1
+    padding: 18px 65px
+    border: 4px solid $color1
+    display: inline-block
+    margin-bottom: 178px
+    font-family: 'Rubik'
+    font-weight: 600
+    font-size: 14px
+    line-height: 17px
+    letter-spacing: 0.1em
+    text-transform: uppercase
+.building
+    &__content
+        display: flex
+        flex-direction: column
+    &__video
+        flex: 1 1 auto
+    &__video iframe
+        width: 100%
+        height: 100%
+    &__content-info
+        display: flex
+        justify-content: center
+        flex: 0 0 auto
+    &__quote, &__estimate
+        width: 50%
+        min-height: 130px
+    &__quote
+        background-color: $color1
+        padding-left: 24px
+    &__quote-call
+        margin-top: 17px
+        font-family: 'Rubik'
+        font-style: normal
+        font-weight: 700
+        font-size: 30px
+        line-height: 50px
+    &__quote-num
+        font-family: 'Rubik'
+        font-weight: 500
+        font-size: 24px
+        line-height: 50px
+        letter-spacing: 0.02em
+        color: #000
+        display: inline-block
+        margin-bottom: 11px
+    &__estimate
+        display: flex
+        justify-content: center
+        align-items: center
+    &__estimate-btn
+        font-family: 'Rubik'
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.1em
+        color: #1F1F1F
+        padding: 19px 29px
+        border: 4px solid #1F1F1F
+
+.together
+    margin-bottom: 100px
+    &__inner
+        display: grid
+        grid-template-columns: 440px minmax(0, 100%)
+        max-width: 1096px
+        margin: 0 auto
+    &__title
+        margin-top: 0
+    &__button
+        margin-bottom: 40px
+    &__questions
+    &__questions-text
+        cursor: pointer
+        background-color: #fff
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 22px 25px
+        font-family: 'Rubik'
+        font-style: normal
+        font-weight: 700
+        font-size: 16px
+        line-height: 19px
+        letter-spacing: 0.04em
+        p
+            max-width: 400px
+    &__questions-answerbox
+        padding: 22px 25px
+        background-color: #fff
+        font-family: 'Open Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 15px
+        line-height: 27px
+        letter-spacing: 0.04em
+        color: #666666
+        transition: all .5s
+        padding: 0 25px
+        max-height: 0px
+        overflow: hidden
+
+        p
+            max-width: 646px
+            opacity: 0
+            transition: all .5s
+    &__questions-answerbox--active
+        max-height: 200px
+        padding: 22px 25px
+        p
+            opacity: 1
+    &__questions-icons
+        cursor: pointer
+
+.clients
+    padding-bottom: 100px
+    &__inner
+    &__title
+        @extend %title
+        text-align: center
+        padding-bottom: 38px
+        margin-bottom: 38px
+        position: relative
+        &::after
+            content: ""
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            bottom: 0
+            height: 5px
+            width: 48px
+            background-color: $color1
+    &__box
+        display: flex
+        justify-content: center
+        gap: 60px
+        flex-wrap: wrap
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        background-color: #fff
+        width: 311px
+        padding: 0 32px
+        p
+            max-width: 248px
+            font-family: 'Open Sans'
+            font-weight: 400
+            font-size: 15px
+            line-height: 27px
+            letter-spacing: 0.04em
+            color: #666666
+    &__rate
+        display: flex
+        gap: 5px
+        margin: 32px 0 41px
+    &__name
+        align-self: start
+        margin: 16px 0 40px
+        font-family: 'Rubik'
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 50px
+        letter-spacing: 0.02em
+        color: $color2
+.partners
+    padding-bottom: 100px
+    &__inner
+        display: grid
+        margin: 0 auto
+        max-width: 800px
+        grid-template-columns: repeat(3, minmax(0, 200px))
+        align-items: center
+        justify-content: center
+        gap: 80px
+
+@import 'media'
