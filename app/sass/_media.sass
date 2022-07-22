@@ -1,4 +1,141 @@
+@media (max-width: 1270px)
+    .text-left
+        margin-left: 60px !important
+    .project
+        &__info-text-container
+            margin: 40px 0 0 60px
+            p
+                width: 100%
+        &__info-text
+            display: block
+        &__info-text-p
+            max-width: 100%
+            padding-right: 15px
+        &__info-title
+            margin-left: 60px
+@media (max-width: 1250px)
+    .building
+        &__inner
+            grid-template-columns: 1fr
+            grid-template-rows: 1fr minmax(0, 600px)
+        &__info
+            padding: 0 15px
+        &__button
+            margin-bottom: 40px
+        &__title
+            margin: 30px 0 28px
+            padding: 0 15px 30px 15px
+            text-align: center
+            max-width: 100%
+            &::after
+                left: 50%
+                transform: translateX(-50%)
+                bottom: 0
+        &__text
+            max-width: 100%
+            text-align: center
+        &__button
+            display: block
+            text-align: center
+            max-width: 300px
+            margin: 0 auto 30px auto
+    .construction
+        &__content-title, &__content-text, &__content-btn
+            margin-left: 70px
+    %title
+        font-size: 30px
+@media (max-width: 1150px)
+    .footer
+        &__contacts
+            padding: 40px 20px 0 20px
+@media (max-width: 960px)
+    .latest
+        &__projects
+            flex-wrap: wrap
+            gap: 50px 35px
+
+@media (max-width: 960px)
+    .together
+        &__inner
+            display: block
+        &__questions
+            width: 100%
+        &__info
+            text-align: center
+        &__text, &__title
+            max-width: 100%
+        &__title
+            margin-bottom: 30px
+            padding-bottom: 20px
+            &::after
+                left: 50%
+                transform: translateX(-50%)
+    .project
+        &__inner
+            grid-template-columns: 1fr
+            grid-template-rows: minmax(0, 400px) 1fr
+        &-img
+    .construction
+        &__inner
+            grid-template-columns: 1fr
+        &__services
+            width: 100%
+@media (max-width: 940px)
+    .footer
+        display: block
+        &__formblock
+            padding-top: 33px
+        &__formblock-title
+            max-width: 100%
+            text-align: center
+            margin: 0
+            margin-bottom: 28px
+            &::before
+               left: 50%
+               transform: translateX(-50%) 
+
+        &__form
+            input, button
+                width: 100%
+    .quote
+        &__title
+            margin-right: 40px
+
 @media (max-width: 750px)
+    .project
+        &__info-title
+            text-align: center
+            margin: 30px 0 27px
+            padding: 0 15px 38px 15px
+            &::after
+                left: 50%
+                transform: translateX(-50%)
+        &__info-text
+            text-align: center
+            padding: 0
+        &__info-text-container
+            margin-top: 40px
+            margin-left: 0
+            padding: 0
+        &__info-text-p
+            margin: 0 !important
+            padding: 0 15px
+        &__info-years, &__info-completed
+            margin-top: 38px
+        &__info-btn
+            display: block
+            margin: 0 30px
+            margin-top: 30px
+    .quote
+        &__inner
+            flex-direction: column
+            justify-content: center
+        &__title
+            margin: 0
+            text-align: center
+        &__btn
+            margin-top: 30px
+            padding: 24px 80px
     .header
         &__menu ul
             display: block
@@ -43,3 +180,71 @@
             margin-right: 30px
             position: relative
             z-index: 4
+@media (max-width: 650px)
+    .partners
+        &__inner
+            grid-template-columns: repeat(2, 1fr)
+    .building
+        &__content-info
+            flex-wrap: wrap
+        &__quote, &__estimate
+            width: 100%
+        &__quote
+            padding: 0 15px
+            text-align: center
+    .latest, .project, .building, .together
+        margin-bottom: 40px
+    .latest
+        &__projects-item
+            width: 100%
+            max-width: 500px !important
+        &__projects-item-img
+            max-width: 500px
+            width: 100%
+@media (max-width: 562px)
+    .construction
+        &__content-title
+            font-size: 50px
+            padding: 8px 0 8px 23px
+            text-align: center
+            margin: 0
+            margin-top: 40px
+            padding: 0 15px 15px 15px
+            &::before
+                top: 100%
+                bottom: 0
+                left: 50%
+                transform: translateX(-50%)
+                height: 4px
+                width: 60px
+        &__content-text
+            font-size: 17px
+            margin: 0
+            margin-top: 38px
+            text-align: center
+            padding: 0 15px
+        &__content-btn
+            text-align: center
+            display: block
+            text-align: center
+            margin-left: 15px
+            margin-right: 15px
+@media (max-width: 420px)
+    .together
+        &__questions-text
+            font-size: 14px
+            p
+                max-width: 240px
+        &__questions-answer
+            font-size: 13px
+    .project
+        &__info-stat
+            flex-wrap: wrap
+            margin-top: 38px
+        &__info-years, &__info-completed
+            width: 100%
+            margin: 0
+
+    .construction
+        &__content-title
+            font-size: 38px

@@ -23,7 +23,7 @@ console.log(menuBtn)
 
 menuBtn.addEventListener('click', function () {
     menuList.classList.toggle('header__menu-list--active');
-    document.body.classList.toggle('locked')
+    menuBtn.classList.toggle('menu-btn--active')
 })
 
 
